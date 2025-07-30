@@ -3,7 +3,7 @@ import streamlit as st
 # Buku
 class Buku :
     def __init__(self, JudulBuku, KodeBuku, Penulis, TahunTerbit, JumlahBuku):
-        self.JudulBuku = Judul Buku
+        self.JudulBuku = JudulBuku
         self.KodeBuku = Kode Buku
         self.Penulis = Penulis
         self.TahunTerbit = Tahun Terbit
