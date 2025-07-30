@@ -59,7 +59,7 @@ elif menu == "3":
 
     if data :
         index = st.number_input("Masukkan nomor buku yang ingin diubah", min_value=1, max_value=len(data))
-        selected = data[index - 1]
+        value = data[index - 1]
         JudulBaru = st.text_input("Judul Buku", value=buku.JudulBuku)
         KodeBaru = st.text_input("Kode Buku", value=buku.KodeBuku)
         PenulisBaru = st.text_input("Penulis", value=buku.Penulis)
