@@ -11,7 +11,7 @@ st.markdown("""
 
     /* Judul utama */
     h1 {
-        color: #2c3e50;
+        color: ##000000;
         text-align: center;
         padding: 10px;
         border-bottom: 2px solid #ccc;
@@ -19,7 +19,7 @@ st.markdown("""
 
     /* Subjudul */
     .stMarkdown h2, .stMarkdown h3 {
-        color: #34495e;
+        color: ##000000;
         margin-top: 20px;
     }
 
