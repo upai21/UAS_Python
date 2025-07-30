@@ -38,9 +38,12 @@ if menu == "1":
     TahunTerbit = st.text_input("Masukkan Tahun Terbit Buku")
     JumlahBuku = st.text_input("Masukkan Jumlah Buku")
     if st.button("Simpan"):
-        if nim and nama:
-            mhs = Mahasiswa(nim, nama)
-            st.session_state.data_mahasiswa.append(mhs)
+        if st.session_state.data_buku:
+        for i, buku in enumerate(st.session_state.data_buku):
+            st.write(f"{i+1}. {buku}")
+        if  JudulBuku and KodeBuku and Penulis and TahunTerbit and JumlahBuku:
+            buku = Buku (JudulBuku, KodeBuku, Penulis, TahunTerbit, JumlahBuku)
+            st.session_state.data_mahasiswa.append(buku)
             st.success("Data berhasil ditambahkan.")
         else:
             st.warning("Harap isi semua kolom.")
