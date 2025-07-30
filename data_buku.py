@@ -4,10 +4,10 @@ import streamlit as st
 class Buku :
     def __init__(self, JudulBuku, KodeBuku, Penulis, TahunTerbit, JumlahBuku):
         self.JudulBuku = JudulBuku
-        self.KodeBuku = Kode Buku
+        self.KodeBuku = KodeBuku
         self.Penulis = Penulis
-        self.TahunTerbit = Tahun Terbit
-        self.JumlahBuku = Jumlah Buku
+        self.TahunTerbit = TahunTerbit
+        self.JumlahBuku = JumlahBuku
 
     def __str__(self):
         return f"Judul Buku: {self.JudulBuku}, Kode Buku: {self.KodeBuku}, Penulis: {self.Penulis}, TahunTerbit: {self.TahunTerbit}, Jumlah Buku : {self.JumlahBuku}"
