@@ -14,7 +14,7 @@ class Buku :
 
 # Data disimpan di list session_state
 if 'Data_Buku' not in st.session_state:
-    st.session_state.data_mahasiswa = []
+    st.session_state.Data_Buku = []
 
 # Tampilan utama
 #format berupa judul/bold
