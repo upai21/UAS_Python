@@ -40,7 +40,7 @@ if menu == "1":
     if st.button("Simpan"):
         if  JudulBuku and KodeBuku and Penulis and TahunTerbit and JumlahBuku:
             buku = Buku (JudulBuku, KodeBuku, Penulis, TahunTerbit, JumlahBuku)
-            st.session_state.data_buku.append(buku)
+            st.session_state.Data_Buku.append(buku)
             st.success("Data berhasil ditambahkan.")
         else:
             st.warning("Harap isi semua kolom.")
