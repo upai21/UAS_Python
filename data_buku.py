@@ -1,5 +1,66 @@
 import streamlit as st
 
+# Custom CSS
+st.markdown("""
+    <style>
+    /* Warna background halaman */
+    .stApp {
+        background-color: #f4f6f8;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Judul utama */
+    h1 {
+        color: #2c3e50;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 2px solid #ccc;
+    }
+
+    /* Subjudul */
+    .stMarkdown h2, .stMarkdown h3 {
+        color: #34495e;
+        margin-top: 20px;
+    }
+
+    /* Tombol */
+    button[kind="primary"] {
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        padding: 8px 20px;
+    }
+
+    /* Tombol hover */
+    button[kind="primary"]:hover {
+        background-color: #2980b9;
+        color: white;
+    }
+
+    /* Input teks */
+    input {
+        border-radius: 8px !important;
+        border: 1px solid #ccc !important;
+        padding: 6px !important;
+    }
+
+    /* Pesan sukses dan warning */
+    .stAlert {
+        border-radius: 10px;
+    }
+
+    /* Teks daftar buku */
+    .element-container p {
+        padding: 5px 10px;
+        background-color: #ecf0f1;
+        border-radius: 6px;
+        margin-bottom: 5px;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+
 # Buku
 class Buku:
     def __init__(self, JudulBuku, KodeBuku, Penulis, TahunTerbit, JumlahBuku):
