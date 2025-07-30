@@ -1,68 +1,71 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* Background dan font */
+    /* Warna dasar latar belakang dan teks */
     .stApp {
-        background-color: #1e1e2f;
-        color: #f1f1f1;
+        background-color: #e6f0fa; /* biru muda sangat terang */
+        color: #1e2a38;
         font-family: 'Segoe UI', sans-serif;
     }
 
     /* Judul utama */
     h1 {
-        color: #61dafb;
+        color: #005f99;
         text-align: center;
         padding-bottom: 10px;
-        border-bottom: 2px solid #444;
+        border-bottom: 2px solid #aacce6;
     }
 
     /* Subjudul */
     .stMarkdown h2, .stMarkdown h3 {
-        color: #ffffff;
+        color: #005f99;
         margin-top: 20px;
     }
 
-    /* Input field */
+    /* Input dan textarea */
     input, textarea {
-        background-color: #2c2c3e !important;
-        color: #ffffff !important;
-        border: 1px solid #555 !important;
-        border-radius: 6px !important;
+        background-color: #ffffff !important;
+        color: #1e2a38 !important;
+        border: 1px solid #99c2e6 !important;
+        border-radius: 8px !important;
     }
 
-    /* Placeholder text */
+    /* Placeholder */
     ::placeholder {
-        color: #bbb !important;
+        color: #8aaac4 !important;
     }
 
-    /* Tombol utama */
+    /* Tombol */
     button[kind="primary"] {
-        background-color: #61dafb;
-        color: black;
+        background-color: #4da6ff;
+        color: white;
         font-weight: bold;
         border-radius: 8px;
     }
 
+    /* Hover tombol */
     button[kind="primary"]:hover {
-        background-color: #21a1f1;
+        background-color: #3399ff;
         color: white;
     }
 
-    /* Daftar buku style */
+    /* Item daftar buku */
     .element-container p {
-        background-color: #2b2b3d;
-        padding: 6px 12px;
+        background-color: #dbeeff;
+        padding: 8px 12px;
         border-radius: 6px;
-        margin-bottom: 5px;
+        margin-bottom: 6px;
+        border-left: 4px solid #3399ff;
     }
 
-    /* Box alert styling */
+    /* Alert styling */
     .stAlert {
         border-radius: 8px;
         padding: 10px;
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 # Buku
 class Buku:
