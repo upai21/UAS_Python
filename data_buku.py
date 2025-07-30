@@ -1,9 +1,8 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* Perbaiki tombol agar bergaya bersih dan sesuai tema */
     div.stButton > button {
-        background-color: #2196f3;
+        background-color: #78DDFF;
         color: white;
         font-weight: 600;
         border: none;
