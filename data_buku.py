@@ -1,36 +1,57 @@
 import streamlit as st
 st.markdown("""
     <style>
+    /* Umum */
+    body {
+        background-color: #f3f4f6;
+    }
+
+    h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* Input dan Label */
+    .stTextInput > div > input {
+        border: 2px solid #2196f3;
+        border-radius: 8px;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    /* Button */
     div.stButton > button {
         background-color: #2196f3;
         color: white;
-        font-weight: 600;
-        border: none;
-        border-radius: 8px;
+        font-weight: bold;
         padding: 10px 24px;
-        box-shadow: 1px 2px 6px rgba(0,0,0,0.2);
-        transition: 0.2s ease;
+        border-radius: 10px;
+        border: none;
         font-size: 16px;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
     }
 
     div.stButton > button:hover {
         background-color: #1976d2;
-        transform: scale(1.03);
     }
 
-    /* Pusatkan tombol */
-    div.stButton {
-        display: flex;
-        justify-content: center;
+    /* Card-style box for data */
+    .stMarkdown {
+        background-color: #ffffff;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        margin-bottom: 10px;
     }
 
-    /* Ganti background utama */
-    .stApp {
-        background-color: #78DDFF;
+    /* Alert and success style */
+    .stAlert {
+        border-radius: 10px !important;
     }
     </style>
 """, unsafe_allow_html=True)
-
 
 
 # Buku
