@@ -68,7 +68,7 @@ elif menu == "3":
 
         if st.button("Simpan Perubahan"):
              if JudulBaru and KodeBaru and  PenulisBaru and TahunBaru and JumlahBaru:
-                st.session_state.Data_Buku[indeks - 1] = Buku( JudulBaru, KodeBaru, PenulisBaru, TahunBaru, JumlahBaru)
+                st.session_state.Data_Buku[index - 1] = Buku( JudulBaru, KodeBaru, PenulisBaru, TahunBaru, JumlahBaru)
                 st.success("✅ Data buku berhasil diubah.")
             else:
                 st.warning("⚠️ Harap isi semua kolom.")
