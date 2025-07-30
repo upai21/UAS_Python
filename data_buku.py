@@ -66,14 +66,13 @@ elif menu == "3":
         TahunBaru = st.text_input("Tahun Terbit", selected.TahunTerbit)
         JumlahBaru = st.text_input("Jumlah Buku",selected.JumlahBuku)
 
-        if st.button("Simpan Perubahan"):
-             if JudulBaru and KodeBaru and  PenulisBaru and TahunBaru and JumlahBaru:
-                st.session_state.Data_Buku[index - 1] = Buku( JudulBaru, KodeBaru, PenulisBaru, TahunBaru, JumlahBaru)
-                st.success("✅ Data buku berhasil diubah.")
-            else:
-                st.warning("⚠️ Harap isi semua kolom.")
+       if st.button("Simpan Perubahan"):
+    if JudulBaru and KodeBaru and PenulisBaru and TahunBaru and JumlahBaru:
+        st.session_state.Data_Buku[index - 1] = Buku(JudulBaru, KodeBaru, PenulisBaru, TahunBaru, JumlahBaru)
+        st.success("✅ Data buku berhasil diubah.")
     else:
-        st.info("Belum ada data buku.")
+        st.warning("⚠️ Harap isi semua kolom.")
+
         
 elif menu == "4":
     st.subheader("🗑️ Hapus Data Buku")
