@@ -55,7 +55,7 @@ elif menu == "2":
 
 elif menu == "3":
     st.subheader("✏️ Ubah Data Buku")
-    data = st.session_state.data_mahasiswa
+    data = st.session_state.Data_Buku
     if st.session_state.Data_Buku:
         for i, mhs in enumerate(st.session_state.Data_Buku):
             st.write(f"{i+1}. {buku}")
