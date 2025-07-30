@@ -3,7 +3,7 @@ import streamlit as st
 # Buku
 class Buku :
     def __init__(self, JudulBuku, KodeBuku, Penulis, TahunTerbit, JumlahBuku):
-        self.JudulBuku = JudulBuku
+        self.Judul Buku = JudulBuku
         self.KodeBuku = KodeBuku
         self.Penulis = Penulis
         self.TahunTerbit = TahunTerbit
@@ -30,7 +30,7 @@ st.write("4. Hapus Data")
 menu = st.text_input("Masukkan angka menu (1-4):")
 
 # Fungsi menu
-elif menu == "1":
+if menu == "1":
     st.subheader("➕ Tambah Buku")
     JudulBuku = st.text_input("Masukkan Judul Buku")
     KodeBuku = st.text_input("Masukkan Kode Buku")
@@ -45,7 +45,7 @@ elif menu == "1":
         else:
             st.warning("Harap isi semua kolom.")
             
-if menu == "2":
+elif menu == "2":
     st.subheader("📄 Daftar Mahasiswa")
     if st.session_state.data_mahasiswa:
         for i, mhs in enumerate(st.session_state.data_mahasiswa):
