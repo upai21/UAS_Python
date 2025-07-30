@@ -10,7 +10,7 @@ st.markdown("""
 
     /* Judul utama */
     h1 {
-        color: #1976d2;
+        color:#0d47a1;
         text-align: center;
         padding-bottom: 10px;
         border-bottom: 2px solid #90caf9;
