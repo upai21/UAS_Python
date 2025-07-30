@@ -59,23 +59,22 @@ elif menu == "3":
 
     if data :
         index = st.number_input("Masukkan nomor buku yang ingin diubah", min_value=1, max_value=len(data))
-        value = data[index - 1]
-        JudulBaru = st.text_input("Judul Buku", value=buku.JudulBuku)
-        KodeBaru = st.text_input("Kode Buku", value=buku.KodeBuku)
-        PenulisBaru = st.text_input("Penulis", value=buku.Penulis)
-        TahunBaru = st.text_input("Tahun Terbit", value=buku.TahunTerbit)
-        JumlahBaru = st.text_input("Jumlah Buku", value=buku.JumlahBuku)
+        selected = data[index - 1]
+        JudulBaru = st.text_input("Judul Buku", selected.JudulBuku)
+        KodeBaru = st.text_input("Kode Buku", selected.KodeBuku)
+        PenulisBaru = st.text_input("Penulis", selected.Penulis)
+        TahunBaru = st.text_input("Tahun Terbit", selected.TahunTerbit)
+        JumlahBaru = st.text_input("Jumlah Buku",selected.JumlahBuku)
 
         if st.button("Simpan Perubahan"):
-            buku.JudulBuku = JudulBaru
-            buku.KodeBuku = KodeBaru
-            buku.Penulis = PenulisBaru
-            buku.TahunTerbit = TahunBaru
-            buku.JumlahBuku = JumlahBaru
-            st.success("Data buku berhasil diperbarui.")
+             if JudulBaru and KodeBaru and  PenulisBaru and TahunBaru and JumlahBaru:
+                st.session_state.Data_Buku[indeks - 1] = Buku( JudulBaru, KodeBaru, PenulisBaru, TahunBaru, JumlahBaru)
+                st.success("✅ Data buku berhasil diubah.")
+            else:
+                st.warning("⚠️ Harap isi semua kolom.")
     else:
-        st.info("Belum ada data untuk diubah.")
-
+        st.info("Belum ada data buku.")
+        
 elif menu == "4":
     st.subheader("🗑️ Hapus Data Buku")
 
