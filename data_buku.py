@@ -55,15 +55,37 @@ elif menu == "2":
 
 elif menu == "3":
     st.subheader("✏️ Ubah Data Buku")
-    data = st.session_state.Data_Buku
- 
-    
+
+    if st.session_state.Data_Buku:
+        index = st.number_input("Pilih indeks buku yang ingin diubah (mulai dari 0)", min_value=0, max_value=len(st.session_state.Data_Buku)-1, step=1)
+        buku = st.session_state.Data_Buku[index]
+
+        JudulBaru = st.text_input("Judul Buku", value=buku.JudulBuku)
+        KodeBaru = st.text_input("Kode Buku", value=buku.KodeBuku)
+        PenulisBaru = st.text_input("Penulis", value=buku.Penulis)
+        TahunBaru = st.text_input("Tahun Terbit", value=buku.TahunTerbit)
+        JumlahBaru = st.text_input("Jumlah Buku", value=buku.JumlahBuku)
+
+        if st.button("Simpan Perubahan"):
+            buku.JudulBuku = JudulBaru
+            buku.KodeBuku = KodeBaru
+            buku.Penulis = PenulisBaru
+            buku.TahunTerbit = TahunBaru
+            buku.JumlahBuku = JumlahBaru
+            st.success("Data buku berhasil diperbarui.")
+    else:
+        st.info("Belum ada data untuk diubah.")
 
 elif menu == "4":
-    st.subheader("🗑️ Hapus Mahasiswa")
-    
+    st.subheader("🗑️ Hapus Data Buku")
 
-elif menu != "":
-    st.warning("Masukkan angka 1 - 4 sesuai menu.")
+    if st.session_state.Data_Buku:
+        index = st.number_input("Pilih indeks buku yang ingin dihapus (mulai dari 0)", min_value=0, max_value=len(st.session_state.Data_Buku)-1, step=1)
+
+        if st.button("Hapus"):
+            buku_dihapus = st.session_state.Data_Buku.pop(index)
+            st.success(f"Buku '{buku_dihapus.JudulBuku}' berhasil dihapus.")
+    else:
+        st.info("Belum ada data untuk dihapus.")
 
 
