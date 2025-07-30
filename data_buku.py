@@ -1,68 +1,61 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* Warna dasar latar belakang dan teks */
+    /* Global App Style */
     .stApp {
-        background-color: #dceefd;  /* biru pastel */
+        background-color: #dceefd;
+        font-family: 'Segoe UI', 'Arial', sans-serif;
         color: #0a1a2f;
-        font-family: 'Segoe UI', sans-serif;
     }
 
     /* Judul utama */
     h1 {
-        color:#0d47a1;
-        text-align: center;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #90caf9;
-    }
-
-    /* Subjudul */
-    .stMarkdown h2, .stMarkdown h3 {
         color: #0d47a1;
+        text-align: center;
         font-weight: 700;
-        margin-top: 20px;
+        border-bottom: 2px solid #90caf9;
+        padding-bottom: 10px;
     }
 
-    /* Input dan textarea */
+    /* Subjudul dan label */
+    .stMarkdown h2, .stMarkdown h3, label {
+        color: #0d47a1 !important;
+        font-weight: 600;
+    }
+
+    /* Input style */
     input, textarea {
         background-color: #ffffff !important;
         color: #000000 !important;
-        border: 1px solid #90caf9 !important;
+        border: 2px solid #90caf9 !important;
         border-radius: 8px !important;
         padding: 0.5em !important;
     }
 
-    /* Number input spin box */
-    .stNumberInput input {
-        color: #000 !important;
-    }
-
     /* Placeholder */
     ::placeholder {
-        color: #5c7491 !important;
+        color: #6d89aa !important;
     }
 
-    /* Label field */
-    label {
-        color: #0d47a1 !important;
-        font-weight: 600 !important;
-    }
-
-    /* Tombol */
+    /* Tombol utama */
     button[kind="primary"] {
-        background-color: #42a5f5;
+        background-color: #2196f3;
         color: white;
         font-weight: bold;
         border-radius: 8px;
-        padding: 8px 16px;
+        padding: 10px 20px;
+        box-shadow: 1px 2px 6px rgba(0,0,0,0.2);
+        border: none;
+        transition: 0.3s ease;
     }
 
     button[kind="primary"]:hover {
-        background-color: #1e88e5;
+        background-color: #1976d2;
         color: white;
+        transform: scale(1.02);
     }
 
-    /* Item daftar buku */
+    /* Daftar buku tampil rapi */
     .element-container p {
         background-color: #e3f2fd;
         padding: 8px 12px;
@@ -71,7 +64,7 @@ st.markdown("""
         border-left: 4px solid #2196f3;
     }
 
-    /* Alert */
+    /* Alert dan notifikasi */
     .stAlert {
         border-radius: 8px;
         padding: 10px;
@@ -79,6 +72,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 # Buku
