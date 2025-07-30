@@ -2,7 +2,7 @@ import streamlit as st
 st.markdown("""
     <style>
     div.stButton > button {
-        background-color: #78DDFF;
+        background-color: #2196f3;
         color: white;
         font-weight: 600;
         border: none;
@@ -22,6 +22,9 @@ st.markdown("""
     div.stButton {
         display: flex;
         justify-content: center;
+    }
+    body {
+        background-color: #78DDFF;
     }
     </style>
 """, unsafe_allow_html=True)
