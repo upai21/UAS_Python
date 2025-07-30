@@ -57,7 +57,7 @@ elif menu == "3":
     st.subheader("✏️ Ubah Data Buku")
 
     if st.session_state.Data_Buku:
-        index = st.number_input("Pilih indeks buku yang ingin diubah (mulai dari 0)", min_value=0, max_value=len(st.session_state.Data_Buku)-1, step=1)
+        index = st.number_input("Masukkan nomor buku yang ingin diubah (mulai dari 0)", min_value=0, max_value=len(st.session_state.Data_Buku)-1, step=1)
         buku = st.session_state.Data_Buku[index]
 
         JudulBaru = st.text_input("Judul Buku", value=buku.JudulBuku)
@@ -80,7 +80,7 @@ elif menu == "4":
     st.subheader("🗑️ Hapus Data Buku")
 
     if st.session_state.Data_Buku:
-        index = st.number_input("Pilih indeks buku yang ingin dihapus (mulai dari 0)", min_value=0, max_value=len(st.session_state.Data_Buku)-1, step=1)
+        index = st.number_input("Pilih nomor buku yang ingin dihapus (mulai dari 0)", min_value=0, max_value=len(st.session_state.Data_Buku)-1, step=1)
 
         if st.button("Hapus"):
             buku_dihapus = st.session_state.Data_Buku.pop(index)
