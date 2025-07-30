@@ -1,78 +1,31 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* Global App Style */
-    .stApp {
-        background-color: #dceefd;
-        font-family: 'Segoe UI', 'Arial', sans-serif;
-        color: #0a1a2f;
-    }
-
-    /* Judul utama */
-    h1 {
-        color: #0d47a1;
-        text-align: center;
-        font-weight: 700;
-        border-bottom: 2px solid #90caf9;
-        padding-bottom: 10px;
-    }
-
-    /* Subjudul dan label */
-    .stMarkdown h2, .stMarkdown h3, label {
-        color: #0d47a1 !important;
-        font-weight: 600;
-    }
-
-    /* Input style */
-    input, textarea {
-        background-color: #ffffff !important;
-        color: #000000 !important;
-        border: 2px solid #90caf9 !important;
-        border-radius: 8px !important;
-        padding: 0.5em !important;
-    }
-
-    /* Placeholder */
-    ::placeholder {
-        color: #6d89aa !important;
-    }
-
-    /* Tombol utama */
-    button[kind="primary"] {
+    /* Perbaiki tombol agar bergaya bersih dan sesuai tema */
+    div.stButton > button {
         background-color: #2196f3;
         color: white;
-        font-weight: bold;
-        border-radius: 8px;
-        padding: 10px 20px;
-        box-shadow: 1px 2px 6px rgba(0,0,0,0.2);
+        font-weight: 600;
         border: none;
-        transition: 0.3s ease;
-    }
-
-    button[kind="primary"]:hover {
-        background-color: #1976d2;
-        color: white;
-        transform: scale(1.02);
-    }
-
-    /* Daftar buku tampil rapi */
-    .element-container p {
-        background-color: #e3f2fd;
-        padding: 8px 12px;
-        border-radius: 6px;
-        margin-bottom: 6px;
-        border-left: 4px solid #2196f3;
-    }
-
-    /* Alert dan notifikasi */
-    .stAlert {
         border-radius: 8px;
-        padding: 10px;
-        font-weight: 500;
+        padding: 10px 24px;
+        box-shadow: 1px 2px 6px rgba(0,0,0,0.2);
+        transition: 0.2s ease;
+        font-size: 16px;
+    }
+
+    div.stButton > button:hover {
+        background-color: #1976d2;
+        transform: scale(1.03);
+    }
+
+    /* Pusatkan tombol */
+    div.stButton {
+        display: flex;
+        justify-content: center;
     }
     </style>
 """, unsafe_allow_html=True)
-
 
 
 # Buku
