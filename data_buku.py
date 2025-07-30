@@ -1,65 +1,68 @@
 import streamlit as st
-
-# Custom CSS
 st.markdown("""
     <style>
-    /* Warna background halaman */
+    /* Background dan font */
     .stApp {
-        background-color: #f4f6f8;
+        background-color: #1e1e2f;
+        color: #f1f1f1;
         font-family: 'Segoe UI', sans-serif;
     }
 
     /* Judul utama */
     h1 {
-        color: ##000000;
+        color: #61dafb;
         text-align: center;
-        padding: 10px;
-        border-bottom: 2px solid #ccc;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #444;
     }
 
     /* Subjudul */
     .stMarkdown h2, .stMarkdown h3 {
-        color: ##000000;
+        color: #ffffff;
         margin-top: 20px;
     }
 
-    /* Tombol */
+    /* Input field */
+    input, textarea {
+        background-color: #2c2c3e !important;
+        color: #ffffff !important;
+        border: 1px solid #555 !important;
+        border-radius: 6px !important;
+    }
+
+    /* Placeholder text */
+    ::placeholder {
+        color: #bbb !important;
+    }
+
+    /* Tombol utama */
     button[kind="primary"] {
-        background-color: #3498db;
-        color: white;
+        background-color: #61dafb;
+        color: black;
         font-weight: bold;
         border-radius: 8px;
-        padding: 8px 20px;
     }
 
-    /* Tombol hover */
     button[kind="primary"]:hover {
-        background-color: #2980b9;
+        background-color: #21a1f1;
         color: white;
     }
 
-    /* Input teks */
-    input {
-        border-radius: 8px !important;
-        border: 1px solid #ccc !important;
-        padding: 6px !important;
-    }
-
-    /* Pesan sukses dan warning */
-    .stAlert {
-        border-radius: 10px;
-    }
-
-    /* Teks daftar buku */
+    /* Daftar buku style */
     .element-container p {
-        padding: 5px 10px;
-        background-color: #ecf0f1;
+        background-color: #2b2b3d;
+        padding: 6px 12px;
         border-radius: 6px;
         margin-bottom: 5px;
     }
+
+    /* Box alert styling */
+    .stAlert {
+        border-radius: 8px;
+        padding: 10px;
+    }
     </style>
 """, unsafe_allow_html=True)
-
 
 # Buku
 class Buku:
