@@ -1,55 +1,62 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* Umum */
+    /* Latar belakang utama */
     body {
-        background-color: #f3f4f6;
+        background-color: #0d1117;
     }
 
+    /* Judul */
     h1 {
-        color: #2c3e50;
+        color: #ffffff;
         text-align: center;
         margin-bottom: 30px;
     }
 
-    /* Input dan Label */
-    .stTextInput > div > input {
-        border: 2px solid #2196f3;
-        border-radius: 8px;
-        padding: 8px;
-        font-size: 16px;
+    /* Teks biasa */
+    .stText, .stMarkdown, .stTextInput label, .stNumberInput label, .stSubheader, .stAlert, .stInfo {
+        color: #ffffff !important;
     }
 
-    /* Button */
+    /* Input */
+    .stTextInput > div > input,
+    .stNumberInput input {
+        background-color: #161b22;
+        color: white;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    /* Tombol */
     div.stButton > button {
-        background-color: #2196f3;
+        background-color: #238636;
         color: white;
         font-weight: bold;
-        padding: 10px 24px;
-        border-radius: 10px;
+        padding: 10px 20px;
+        border-radius: 8px;
         border: none;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        margin-top: 10px;
+        transition: background-color 0.2s;
     }
 
     div.stButton > button:hover {
-        background-color: #1976d2;
+        background-color: #2ea043;
     }
 
-    /* Card-style box for data */
+    /* Kotak menu */
     .stMarkdown {
-        background-color: #ffffff;
+        background-color: #161b22;
         padding: 16px;
         border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.4);
         margin-bottom: 10px;
     }
 
-    /* Alert and success style */
-    .stAlert {
-        border-radius: 10px !important;
+    /* Subheader */
+    .stSubheader {
+        color: #58a6ff;
     }
+
     </style>
 """, unsafe_allow_html=True)
 
