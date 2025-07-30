@@ -46,16 +46,21 @@ if menu == "1":
             st.warning("Harap isi semua kolom.")
             
 elif menu == "2":
-    st.subheader("📄 Daftar Mahasiswa")
-    if st.session_state.data_mahasiswa:
-        for i, mhs in enumerate(st.session_state.data_mahasiswa):
-            st.write(f"{i+1}. {mhs}")
+    st.subheader("📄 Daftar Buku")
+    if st.session_state.Data_Buku:
+        for i, buku in enumerate(st.session_state.Data_Buku):
+            st.write(f"{i+1}. {buku}")
     else:
         st.info("Belum ada data.")
 
 elif menu == "3":
-    st.subheader("✏️ Ubah Mahasiswa")
+    st.subheader("✏️ Ubah Data Buku")
     data = st.session_state.data_mahasiswa
+    if st.session_state.Data_Buku:
+        for i, mhs in enumerate(st.session_state.Data_Buku):
+            st.write(f"{i+1}. {buku}")
+    else:
+        st.info("Belum ada data.")
     
 
 elif menu == "4":
