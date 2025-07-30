@@ -38,7 +38,6 @@ if menu == "1":
     TahunTerbit = st.text_input("Masukkan Tahun Terbit Buku")
     JumlahBuku = st.text_input("Masukkan Jumlah Buku")
     if st.button("Simpan"):
-        if st.session_state.data_buku:
         if  JudulBuku and KodeBuku and Penulis and TahunTerbit and JumlahBuku:
             buku = Buku (JudulBuku, KodeBuku, Penulis, TahunTerbit, JumlahBuku)
             st.session_state.data_buku.append(buku)
