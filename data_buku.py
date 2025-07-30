@@ -3,65 +3,79 @@ st.markdown("""
     <style>
     /* Warna dasar latar belakang dan teks */
     .stApp {
-        background-color: #e6f0fa; /* biru muda sangat terang */
-        color: #1e2a38;
+        background-color: #dceefd;  /* biru pastel */
+        color: #0a1a2f;
         font-family: 'Segoe UI', sans-serif;
     }
 
     /* Judul utama */
     h1 {
-        color: #005f99;
+        color: #1976d2;
         text-align: center;
         padding-bottom: 10px;
-        border-bottom: 2px solid #aacce6;
+        border-bottom: 2px solid #90caf9;
     }
 
     /* Subjudul */
     .stMarkdown h2, .stMarkdown h3 {
-        color: #005f99;
+        color: #0d47a1;
+        font-weight: 700;
         margin-top: 20px;
     }
 
     /* Input dan textarea */
     input, textarea {
         background-color: #ffffff !important;
-        color: #1e2a38 !important;
-        border: 1px solid #99c2e6 !important;
+        color: #000000 !important;
+        border: 1px solid #90caf9 !important;
         border-radius: 8px !important;
+        padding: 0.5em !important;
+    }
+
+    /* Number input spin box */
+    .stNumberInput input {
+        color: #000 !important;
     }
 
     /* Placeholder */
     ::placeholder {
-        color: #8aaac4 !important;
+        color: #5c7491 !important;
+    }
+
+    /* Label field */
+    label {
+        color: #0d47a1 !important;
+        font-weight: 600 !important;
     }
 
     /* Tombol */
     button[kind="primary"] {
-        background-color: #4da6ff;
+        background-color: #42a5f5;
         color: white;
         font-weight: bold;
         border-radius: 8px;
+        padding: 8px 16px;
     }
 
-    /* Hover tombol */
     button[kind="primary"]:hover {
-        background-color: #3399ff;
+        background-color: #1e88e5;
         color: white;
     }
 
     /* Item daftar buku */
     .element-container p {
-        background-color: #dbeeff;
+        background-color: #e3f2fd;
         padding: 8px 12px;
         border-radius: 6px;
         margin-bottom: 6px;
-        border-left: 4px solid #3399ff;
+        border-left: 4px solid #2196f3;
     }
 
-    /* Alert styling */
+    /* Alert */
     .stAlert {
         border-radius: 8px;
         padding: 10px;
+        font-weight: 500;
     }
     </style>
 """, unsafe_allow_html=True)
