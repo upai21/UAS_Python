@@ -55,11 +55,11 @@ elif menu == "2":
 
 elif menu == "3":
     st.subheader("✏️ Ubah Data Buku")
+    data =  st.session_state.Data_Buku
 
-    if st.session_state.Data_Buku:
-        index = st.number_input("Masukkan nomor buku yang ingin diubah", min_value=1, max_value=len(st.session_state.Data_Buku), step=1)
-        buku = st.session_state.Data_Buku[index]
-
+    if data :
+        index = st.number_input("Masukkan nomor buku yang ingin diubah", min_value=1, max_value=len(data))
+        selected = data[index - 1]
         JudulBaru = st.text_input("Judul Buku", value=buku.JudulBuku)
         KodeBaru = st.text_input("Kode Buku", value=buku.KodeBuku)
         PenulisBaru = st.text_input("Penulis", value=buku.Penulis)
