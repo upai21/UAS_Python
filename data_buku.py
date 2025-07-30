@@ -31,7 +31,7 @@ menu = st.text_input("Masukkan angka menu (1-4):")
 
 # Fungsi menu
 if menu == "1":
-    st.subheader("➕ Tambah Buku")
+    st.subheader("➕ Tambah Buku 🤙🤪🫳")
     JudulBuku = st.text_input("Masukkan Judul Buku")
     KodeBuku = st.text_input("Masukkan Kode Buku")
     Penulis = st.text_input("Masukkan Penulis Buku")
