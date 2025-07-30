@@ -23,11 +23,14 @@ st.markdown("""
         display: flex;
         justify-content: center;
     }
-    body {
+
+    /* Ganti background utama */
+    .stApp {
         background-color: #78DDFF;
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 # Buku
