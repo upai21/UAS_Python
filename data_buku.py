@@ -10,38 +10,33 @@ class Buku :
         self.JumlahBuku = Jumlah Buku
 
     def __str__(self):
-        return f"NIM: {self.nim}, Nama: {self.nama}"
+        return f"Judul Buku: {self.JudulBuku}, Kode Buku: {self.KodeBuku}, Penulis: {self.Penulis}, TahunTerbit: {self.TahunTerbit}, Jumlah Buku : {self.JumlahBuku}"
 
 # Data disimpan di list session_state
-if 'data_mahasiswa' not in st.session_state:
+if 'Data_Buku' not in st.session_state:
     st.session_state.data_mahasiswa = []
 
 # Tampilan utama
 #format berupa judul/bold
-st.title("Aplikasi CRUD Mahasiswa")
+st.title("Data Buku Perpustakaan")
 
 #format peenulisan biasa
 st.write("### Pilihan Menu:")
-st.write("1. Lihat Data")
-st.write("2. Tambah Data")
+st.write("1. Tambah Data")
+st.write("2. Lihat Data")
 st.write("3. Ubah Data")
 st.write("4. Hapus Data")
 
 menu = st.text_input("Masukkan angka menu (1-4):")
 
 # Fungsi menu
-if menu == "1":
-    st.subheader("📄 Daftar Mahasiswa")
-    if st.session_state.data_mahasiswa:
-        for i, mhs in enumerate(st.session_state.data_mahasiswa):
-            st.write(f"{i+1}. {mhs}")
-    else:
-        st.info("Belum ada data.")
-
-elif menu == "2":
-    st.subheader("➕ Tambah Mahasiswa")
-    nim = st.text_input("Masukkan NIM")
-    nama = st.text_input("Masukkan Nama")
+elif menu == "1":
+    st.subheader("➕ Tambah Buku")
+    JudulBuku = st.text_input("Masukkan Judul Buku")
+    KodeBuku = st.text_input("Masukkan Kode Buku")
+    Penulis = st.text_input("Masukkan Penulis Buku")
+    TahunTerbit = st.text_input("Masukkan Tahun Terbit Buku")
+    JumlahBuku = st.text_input("Masukkan Jumlah Buku")
     if st.button("Simpan"):
         if nim and nama:
             mhs = Mahasiswa(nim, nama)
@@ -49,6 +44,14 @@ elif menu == "2":
             st.success("Data berhasil ditambahkan.")
         else:
             st.warning("Harap isi semua kolom.")
+            
+if menu == "2":
+    st.subheader("📄 Daftar Mahasiswa")
+    if st.session_state.data_mahasiswa:
+        for i, mhs in enumerate(st.session_state.data_mahasiswa):
+            st.write(f"{i+1}. {mhs}")
+    else:
+        st.info("Belum ada data.")
 
 elif menu == "3":
     st.subheader("✏️ Ubah Mahasiswa")
