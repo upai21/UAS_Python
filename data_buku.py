@@ -1,7 +1,6 @@
 import streamlit as st
 st.markdown("""
     <style>
-    /* Latar belakang utama */
     body {
         background-color: #0d1117;
     }
